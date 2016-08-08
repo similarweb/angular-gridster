@@ -2120,6 +2120,10 @@
                             return item.sizeY + ',' + item.sizeX + ',' + item.minSizeX + ',' + item.maxSizeX + ',' + item.minSizeY + ',' + item.maxSizeY;
                         }, sizeChanged);
 
+                        if(options.handles){
+                            item.gridster.resizable.handles = options.handles;
+                        }
+
                         var draggable = new GridsterDraggable($el, scope, gridster, item, options);
                         var resizable = new GridsterResizable($el, scope, gridster, item, options);
 

@@ -630,6 +630,10 @@
 
                             scope.gridster = gridster;
 
+                            gridster.draggable.stop = function(){
+                                scope.$broadcast('highchartsng.reflow');
+                            }
+
                             $elem.addClass('gridster');
 
                             var isVisible = function (ele) {

@@ -631,8 +631,25 @@
                             scope.gridster = gridster;
 
                             gridster.draggable.stop = function(){
-                                scope.$broadcast('highchartsng.reflow');
-                            }
+                                setTimeout(function(){
+                                    scope.$broadcast('highchartsng.reflow');
+                                },1000);
+                            };
+                            gridster.resizable.start = function(){
+                                setTimeout(function(){
+                                    scope.$broadcast('highchartsng.reflow');
+                                },1000);
+                            };
+                            gridster.resizable.stop = function(){
+                                setTimeout(function(){
+                                    scope.$broadcast('highchartsng.reflow');
+                                },1000);
+                            };
+                            gridster.resizable.resize = function(){
+                                setTimeout(function(){
+                                    scope.$broadcast('highchartsng.reflow');
+                                },0);
+                            };
 
                             $elem.addClass('gridster');
 
